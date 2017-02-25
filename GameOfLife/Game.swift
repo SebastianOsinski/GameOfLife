@@ -39,7 +39,7 @@ class Game {
                     self.onNextGeneration?()
                 }
 
-                usleep(10000)
+                usleep(1000)
             }
         }
     }

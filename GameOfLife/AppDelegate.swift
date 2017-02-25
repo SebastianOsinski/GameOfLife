@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = GameViewController(game: Game(rows: 100, columns: 30))
+        window?.rootViewController = GameViewController(game: Game(rows: 100, columns: 50))
         window?.makeKeyAndVisible()
         return true
     }

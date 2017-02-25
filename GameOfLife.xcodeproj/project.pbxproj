@@ -12,6 +12,7 @@
 		9188008C1E61E9B70003D7EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9188008A1E61E9B70003D7EE /* LaunchScreen.storyboard */; };
 		918800941E61EABD0003D7EE /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918800931E61EABD0003D7EE /* GameViewController.swift */; };
 		918800961E61EAF10003D7EE /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918800951E61EAF10003D7EE /* Game.swift */; };
+		918800981E61FE060003D7EE /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918800971E61FE060003D7EE /* GameView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		9188008D1E61E9B70003D7EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		918800931E61EABD0003D7EE /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		918800951E61EAF10003D7EE /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		918800971E61FE060003D7EE /* GameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				9188008D1E61E9B70003D7EE /* Info.plist */,
 				918800931E61EABD0003D7EE /* GameViewController.swift */,
 				918800951E61EAF10003D7EE /* Game.swift */,
+				918800971E61FE060003D7EE /* GameView.swift */,
 			);
 			path = GameOfLife;
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			files = (
 				918800941E61EABD0003D7EE /* GameViewController.swift in Sources */,
 				918800961E61EAF10003D7EE /* Game.swift in Sources */,
+				918800981E61FE060003D7EE /* GameView.swift in Sources */,
 				918800821E61E9B70003D7EE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,6 +296,7 @@
 				918800921E61E9B70003D7EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
