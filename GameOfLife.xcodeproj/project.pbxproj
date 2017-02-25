@@ -13,6 +13,12 @@
 		918800941E61EABD0003D7EE /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918800931E61EABD0003D7EE /* GameViewController.swift */; };
 		918800961E61EAF10003D7EE /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918800951E61EAF10003D7EE /* Game.swift */; };
 		918800981E61FE060003D7EE /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918800971E61FE060003D7EE /* GameView.swift */; };
+		918800A01E620F7D0003D7EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9188009F1E620F7D0003D7EE /* AppDelegate.swift */; };
+		918800A21E620F7D0003D7EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 918800A11E620F7D0003D7EE /* Assets.xcassets */; };
+		918800A51E620F7D0003D7EE /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 918800A31E620F7D0003D7EE /* MainMenu.xib */; };
+		918800AB1E620FFF0003D7EE /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918800AA1E620FFF0003D7EE /* GameViewController.swift */; };
+		918800AC1E6210170003D7EE /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918800951E61EAF10003D7EE /* Game.swift */; };
+		918800AE1E6211430003D7EE /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918800AD1E6211430003D7EE /* GameView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,10 +30,24 @@
 		918800931E61EABD0003D7EE /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		918800951E61EAF10003D7EE /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		918800971E61FE060003D7EE /* GameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		9188009D1E620F7D0003D7EE /* GameOfLife macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GameOfLife macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9188009F1E620F7D0003D7EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		918800A11E620F7D0003D7EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		918800A41E620F7D0003D7EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		918800A61E620F7D0003D7EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		918800AA1E620FFF0003D7EE /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		918800AD1E6211430003D7EE /* GameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		9188007B1E61E9B70003D7EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9188009A1E620F7D0003D7EE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				918800801E61E9B70003D7EE /* GameOfLife */,
+				9188009E1E620F7D0003D7EE /* GameOfLife macOS */,
 				9188007F1E61E9B70003D7EE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				9188007E1E61E9B70003D7EE /* GameOfLife.app */,
+				9188009D1E620F7D0003D7EE /* GameOfLife macOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -65,6 +87,19 @@
 				918800971E61FE060003D7EE /* GameView.swift */,
 			);
 			path = GameOfLife;
+			sourceTree = "<group>";
+		};
+		9188009E1E620F7D0003D7EE /* GameOfLife macOS */ = {
+			isa = PBXGroup;
+			children = (
+				9188009F1E620F7D0003D7EE /* AppDelegate.swift */,
+				918800A11E620F7D0003D7EE /* Assets.xcassets */,
+				918800A31E620F7D0003D7EE /* MainMenu.xib */,
+				918800A61E620F7D0003D7EE /* Info.plist */,
+				918800AA1E620FFF0003D7EE /* GameViewController.swift */,
+				918800AD1E6211430003D7EE /* GameView.swift */,
+			);
+			path = "GameOfLife macOS";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -87,6 +122,23 @@
 			productReference = 9188007E1E61E9B70003D7EE /* GameOfLife.app */;
 			productType = "com.apple.product-type.application";
 		};
+		9188009C1E620F7D0003D7EE /* GameOfLife macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 918800A91E620F7D0003D7EE /* Build configuration list for PBXNativeTarget "GameOfLife macOS" */;
+			buildPhases = (
+				918800991E620F7D0003D7EE /* Sources */,
+				9188009A1E620F7D0003D7EE /* Frameworks */,
+				9188009B1E620F7D0003D7EE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "GameOfLife macOS";
+			productName = "GameOfLife macOS";
+			productReference = 9188009D1E620F7D0003D7EE /* GameOfLife macOS.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -98,6 +150,11 @@
 				ORGANIZATIONNAME = "Sebastian Osiński";
 				TargetAttributes = {
 					9188007D1E61E9B70003D7EE = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = GJF586P7E7;
+						ProvisioningStyle = Automatic;
+					};
+					9188009C1E620F7D0003D7EE = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = GJF586P7E7;
 						ProvisioningStyle = Automatic;
@@ -118,6 +175,7 @@
 			projectRoot = "";
 			targets = (
 				9188007D1E61E9B70003D7EE /* GameOfLife */,
+				9188009C1E620F7D0003D7EE /* GameOfLife macOS */,
 			);
 		};
 /* End PBXProject section */
@@ -129,6 +187,15 @@
 			files = (
 				9188008C1E61E9B70003D7EE /* LaunchScreen.storyboard in Resources */,
 				918800891E61E9B70003D7EE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9188009B1E620F7D0003D7EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				918800A21E620F7D0003D7EE /* Assets.xcassets in Resources */,
+				918800A51E620F7D0003D7EE /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +213,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		918800991E620F7D0003D7EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				918800AB1E620FFF0003D7EE /* GameViewController.swift in Sources */,
+				918800AC1E6210170003D7EE /* Game.swift in Sources */,
+				918800AE1E6211430003D7EE /* GameView.swift in Sources */,
+				918800A01E620F7D0003D7EE /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
@@ -155,6 +233,14 @@
 				9188008B1E61E9B70003D7EE /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		918800A31E620F7D0003D7EE /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				918800A41E620F7D0003D7EE /* Base */,
+			);
+			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -277,6 +363,40 @@
 			};
 			name = Release;
 		};
+		918800A71E620F7D0003D7EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = GJF586P7E7;
+				INFOPLIST_FILE = "GameOfLife macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = "xyz.osinski.GameOfLife-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		918800A81E620F7D0003D7EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = GJF586P7E7;
+				INFOPLIST_FILE = "GameOfLife macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = "xyz.osinski.GameOfLife-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -297,6 +417,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		918800A91E620F7D0003D7EE /* Build configuration list for PBXNativeTarget "GameOfLife macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				918800A71E620F7D0003D7EE /* Debug */,
+				918800A81E620F7D0003D7EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
