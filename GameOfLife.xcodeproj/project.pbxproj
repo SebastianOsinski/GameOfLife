@@ -7,36 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		91034FB81E6230CD0048C1E7 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918800AD1E6211430003D7EE /* GameView.swift */; };
+		91034FBB1E62324A0048C1E7 /* Color+random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91034FBA1E62324A0048C1E7 /* Color+random.swift */; };
+		91034FBC1E62325D0048C1E7 /* Color+random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91034FBA1E62324A0048C1E7 /* Color+random.swift */; };
+		91034FBE1E6232D20048C1E7 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91034FBD1E6232D20048C1E7 /* GameViewController.swift */; };
+		91034FBF1E6233AA0048C1E7 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91034FBD1E6232D20048C1E7 /* GameViewController.swift */; };
+		91034FC11E62346E0048C1E7 /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91034FC01E62346E0048C1E7 /* Typealiases.swift */; };
+		91034FC21E6234C00048C1E7 /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91034FC01E62346E0048C1E7 /* Typealiases.swift */; };
 		918800821E61E9B70003D7EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918800811E61E9B70003D7EE /* AppDelegate.swift */; };
 		918800891E61E9B70003D7EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 918800881E61E9B70003D7EE /* Assets.xcassets */; };
 		9188008C1E61E9B70003D7EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9188008A1E61E9B70003D7EE /* LaunchScreen.storyboard */; };
-		918800941E61EABD0003D7EE /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918800931E61EABD0003D7EE /* GameViewController.swift */; };
 		918800961E61EAF10003D7EE /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918800951E61EAF10003D7EE /* Game.swift */; };
-		918800981E61FE060003D7EE /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918800971E61FE060003D7EE /* GameView.swift */; };
 		918800A01E620F7D0003D7EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9188009F1E620F7D0003D7EE /* AppDelegate.swift */; };
 		918800A21E620F7D0003D7EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 918800A11E620F7D0003D7EE /* Assets.xcassets */; };
 		918800A51E620F7D0003D7EE /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 918800A31E620F7D0003D7EE /* MainMenu.xib */; };
-		918800AB1E620FFF0003D7EE /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918800AA1E620FFF0003D7EE /* GameViewController.swift */; };
 		918800AC1E6210170003D7EE /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918800951E61EAF10003D7EE /* Game.swift */; };
 		918800AE1E6211430003D7EE /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918800AD1E6211430003D7EE /* GameView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9188007E1E61E9B70003D7EE /* GameOfLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameOfLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		91034FBA1E62324A0048C1E7 /* Color+random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+random.swift"; sourceTree = "<group>"; };
+		91034FBD1E6232D20048C1E7 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		91034FC01E62346E0048C1E7 /* Typealiases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Typealiases.swift; sourceTree = "<group>"; };
+		9188007E1E61E9B70003D7EE /* GameOfLife iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GameOfLife iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		918800811E61E9B70003D7EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		918800881E61E9B70003D7EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9188008B1E61E9B70003D7EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9188008D1E61E9B70003D7EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		918800931E61EABD0003D7EE /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
-		918800951E61EAF10003D7EE /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
-		918800971E61FE060003D7EE /* GameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		918800951E61EAF10003D7EE /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Game.swift; path = GameOfLife/Game.swift; sourceTree = "<group>"; };
 		9188009D1E620F7D0003D7EE /* GameOfLife macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GameOfLife macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9188009F1E620F7D0003D7EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		918800A11E620F7D0003D7EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		918800A41E620F7D0003D7EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		918800A61E620F7D0003D7EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		918800AA1E620FFF0003D7EE /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
-		918800AD1E6211430003D7EE /* GameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		918800AD1E6211430003D7EE /* GameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameView.swift; path = "GameOfLife macOS/GameView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,10 +61,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		91034FB91E6231E30048C1E7 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				918800951E61EAF10003D7EE /* Game.swift */,
+				918800AD1E6211430003D7EE /* GameView.swift */,
+				91034FBA1E62324A0048C1E7 /* Color+random.swift */,
+				91034FBD1E6232D20048C1E7 /* GameViewController.swift */,
+				91034FC01E62346E0048C1E7 /* Typealiases.swift */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
 		918800751E61E9B70003D7EE = {
 			isa = PBXGroup;
 			children = (
-				918800801E61E9B70003D7EE /* GameOfLife */,
+				91034FB91E6231E30048C1E7 /* Common */,
+				918800801E61E9B70003D7EE /* GameOfLife iOS */,
 				9188009E1E620F7D0003D7EE /* GameOfLife macOS */,
 				9188007F1E61E9B70003D7EE /* Products */,
 			);
@@ -69,23 +86,21 @@
 		9188007F1E61E9B70003D7EE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9188007E1E61E9B70003D7EE /* GameOfLife.app */,
+				9188007E1E61E9B70003D7EE /* GameOfLife iOS.app */,
 				9188009D1E620F7D0003D7EE /* GameOfLife macOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		918800801E61E9B70003D7EE /* GameOfLife */ = {
+		918800801E61E9B70003D7EE /* GameOfLife iOS */ = {
 			isa = PBXGroup;
 			children = (
 				918800811E61E9B70003D7EE /* AppDelegate.swift */,
 				918800881E61E9B70003D7EE /* Assets.xcassets */,
 				9188008A1E61E9B70003D7EE /* LaunchScreen.storyboard */,
 				9188008D1E61E9B70003D7EE /* Info.plist */,
-				918800931E61EABD0003D7EE /* GameViewController.swift */,
-				918800951E61EAF10003D7EE /* Game.swift */,
-				918800971E61FE060003D7EE /* GameView.swift */,
 			);
+			name = "GameOfLife iOS";
 			path = GameOfLife;
 			sourceTree = "<group>";
 		};
@@ -96,8 +111,6 @@
 				918800A11E620F7D0003D7EE /* Assets.xcassets */,
 				918800A31E620F7D0003D7EE /* MainMenu.xib */,
 				918800A61E620F7D0003D7EE /* Info.plist */,
-				918800AA1E620FFF0003D7EE /* GameViewController.swift */,
-				918800AD1E6211430003D7EE /* GameView.swift */,
 			);
 			path = "GameOfLife macOS";
 			sourceTree = "<group>";
@@ -105,9 +118,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9188007D1E61E9B70003D7EE /* GameOfLife */ = {
+		9188007D1E61E9B70003D7EE /* GameOfLife iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 918800901E61E9B70003D7EE /* Build configuration list for PBXNativeTarget "GameOfLife" */;
+			buildConfigurationList = 918800901E61E9B70003D7EE /* Build configuration list for PBXNativeTarget "GameOfLife iOS" */;
 			buildPhases = (
 				9188007A1E61E9B70003D7EE /* Sources */,
 				9188007B1E61E9B70003D7EE /* Frameworks */,
@@ -117,9 +130,9 @@
 			);
 			dependencies = (
 			);
-			name = GameOfLife;
+			name = "GameOfLife iOS";
 			productName = GameOfLife;
-			productReference = 9188007E1E61E9B70003D7EE /* GameOfLife.app */;
+			productReference = 9188007E1E61E9B70003D7EE /* GameOfLife iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
 		9188009C1E620F7D0003D7EE /* GameOfLife macOS */ = {
@@ -174,7 +187,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9188007D1E61E9B70003D7EE /* GameOfLife */,
+				9188007D1E61E9B70003D7EE /* GameOfLife iOS */,
 				9188009C1E620F7D0003D7EE /* GameOfLife macOS */,
 			);
 		};
@@ -206,10 +219,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				918800941E61EABD0003D7EE /* GameViewController.swift in Sources */,
+				91034FBB1E62324A0048C1E7 /* Color+random.swift in Sources */,
 				918800961E61EAF10003D7EE /* Game.swift in Sources */,
-				918800981E61FE060003D7EE /* GameView.swift in Sources */,
+				91034FC11E62346E0048C1E7 /* Typealiases.swift in Sources */,
 				918800821E61E9B70003D7EE /* AppDelegate.swift in Sources */,
+				91034FBE1E6232D20048C1E7 /* GameViewController.swift in Sources */,
+				91034FB81E6230CD0048C1E7 /* GameView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,9 +232,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				918800AB1E620FFF0003D7EE /* GameViewController.swift in Sources */,
+				91034FBC1E62325D0048C1E7 /* Color+random.swift in Sources */,
 				918800AC1E6210170003D7EE /* Game.swift in Sources */,
+				91034FC21E6234C00048C1E7 /* Typealiases.swift in Sources */,
 				918800AE1E6211430003D7EE /* GameView.swift in Sources */,
+				91034FBF1E6233AA0048C1E7 /* GameViewController.swift in Sources */,
 				918800A01E620F7D0003D7EE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,7 +426,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		918800901E61E9B70003D7EE /* Build configuration list for PBXNativeTarget "GameOfLife" */ = {
+		918800901E61E9B70003D7EE /* Build configuration list for PBXNativeTarget "GameOfLife iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				918800911E61E9B70003D7EE /* Debug */,
@@ -425,6 +442,7 @@
 				918800A81E620F7D0003D7EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

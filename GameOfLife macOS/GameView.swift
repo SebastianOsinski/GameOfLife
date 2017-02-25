@@ -5,22 +5,36 @@
 //  Created by Sebastian Osiński on 25/02/2017.
 //  Copyright © 2017 Sebastian Osiński. All rights reserved.
 //
-
-import Cocoa
+#if os(iOS)
+    import UIKit
+#else
+    import Cocoa
+#endif
 
 protocol GameViewDelegate: class {
     func numberOfRows() -> Int
     func numberOfColumns() -> Int
-    func colorForCell(row: Int, column: Int) -> NSColor?
+    func colorForCell(row: Int, column: Int) -> Color?
 }
 
-class GameView: NSView {
+class GameView: View {
 
     weak var delegate: GameViewDelegate?
 
+    #if os(iOS)
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
+        drawCells(context: UIGraphicsGetCurrentContext())
+    }
+    #else
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
-        guard let delegate = delegate, let context = NSGraphicsContext.current()?.cgContext else {
+        drawCells(context: NSGraphicsContext.current()?.cgContext)
+    }
+    #endif
+
+    private func drawCells(context: CGContext?) {
+        guard let delegate = delegate, let context = context else {
             return
         }
 

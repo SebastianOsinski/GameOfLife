@@ -19,11 +19,5 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         window.contentViewController = viewController
         window.setFrame(NSRect(x: 0, y: 0, width: 1000, height: 1000), display: true)
     }
-
-    func applicationWillTerminate(_ aNotification: Notification) {
-        // Insert code here to tear down your application
-    }
-
-
 }
 
