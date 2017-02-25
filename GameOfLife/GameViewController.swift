@@ -61,7 +61,7 @@ class GameViewController: UIViewController, GameViewDelegate {
     }
 
     func colorForCell(row: Int, column: Int) -> UIColor? {
-        return game.isAlive(row: row, column: column) ? UIColor(red: 30 / 256, green: 197 / 256, blue: 3 / 256, alpha: 1) : nil
+        return game.isAlive(row: row, column: column) ? .random : nil
     }
 
     override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {

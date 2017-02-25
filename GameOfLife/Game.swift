@@ -86,7 +86,7 @@ class Game {
             for row in 0...(rows + 1) {
                 for column in 0...(columns + 1) {
                     if row == 0 || row == rows + 1 || column == 0 || column == columns + 1 {
-                        cells[row][column] = true
+                        cells[row][column] = false
                     } else {
                         cells[row][column] = arc4random_uniform(2) == 1
                     }
