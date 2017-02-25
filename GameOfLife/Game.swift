@@ -16,8 +16,10 @@ class Game {
     var onNextGeneration: ((Void) -> Void)?
 
     private var cells = [[Bool]]()
+    private var isRunning = false
 
     private let queue = DispatchQueue(label: "xyz.osinski.GameOfLife")
+    private let mutexQueue = DispatchQueue(label: "xyz.osinski.CellsMutex")
 
     init(rows: Int, columns: Int) {
         self.rows = rows
@@ -32,8 +34,14 @@ class Game {
     }
 
     func start() {
+        guard !isRunning else {
+            return
+        }
+
+        isRunning = true
+
         queue.async {
-            while true {
+            while self.isRunning {
                 self.nextGeneration()
                 DispatchQueue.main.sync {
                     self.onNextGeneration?()
@@ -44,30 +52,44 @@ class Game {
         }
     }
 
+    func stop() {
+        guard isRunning else {
+            return
+        }
+
+        isRunning = false
+
+        resetCells()
+    }
+
     private func nextGeneration() {
         let cellsCopy = cells
 
-        for row in 1...rows {
-            for column in 1...columns {
-                let neighbours = neighboursOfCell(row: row, column: column, cells: cellsCopy)
-                let numberOfAliveNeighbours = neighbours.reduce(0) { acc, isAlive in acc + (isAlive ? 1 : 0) }
+        mutexQueue.sync {
+            for row in 1...rows {
+                for column in 1...columns {
+                    let neighbours = neighboursOfCell(row: row, column: column, cells: cellsCopy)
+                    let numberOfAliveNeighbours = neighbours.reduce(0) { acc, isAlive in acc + (isAlive ? 1 : 0) }
 
-                if cellsCopy[row][column] {
-                    cells[row][column] = numberOfAliveNeighbours == 2 || numberOfAliveNeighbours == 3
-                } else {
-                    cells[row][column] = numberOfAliveNeighbours == 3
+                    if cellsCopy[row][column] {
+                        cells[row][column] = numberOfAliveNeighbours == 2 || numberOfAliveNeighbours == 3
+                    } else {
+                        cells[row][column] = numberOfAliveNeighbours == 3
+                    }
                 }
             }
         }
     }
 
     private func resetCells() {
-        for row in 0...(rows + 1) {
-            for column in 0...(columns + 1) {
-                if row == 0 || row == rows + 1 || column == 0 || column == columns + 1 {
-                    cells[row][column] = true
-                } else {
-                    cells[row][column] = arc4random_uniform(2) == 1
+        mutexQueue.sync {
+            for row in 0...(rows + 1) {
+                for column in 0...(columns + 1) {
+                    if row == 0 || row == rows + 1 || column == 0 || column == columns + 1 {
+                        cells[row][column] = true
+                    } else {
+                        cells[row][column] = arc4random_uniform(2) == 1
+                    }
                 }
             }
         }

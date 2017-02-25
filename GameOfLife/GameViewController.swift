@@ -14,6 +14,10 @@ class GameViewController: UIViewController, GameViewDelegate {
 
     private let game: Game
 
+    override var canBecomeFirstResponder: Bool {
+        return true
+    }
+
     private var gameView: GameView {
         return view as! GameView
     }
@@ -58,6 +62,13 @@ class GameViewController: UIViewController, GameViewDelegate {
 
     func colorForCell(row: Int, column: Int) -> UIColor? {
         return game.isAlive(row: row, column: column) ? UIColor(red: 30 / 256, green: 197 / 256, blue: 3 / 256, alpha: 1) : nil
+    }
+
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+        if motion == .motionShake {
+            game.stop()
+            game.start()
+        }
     }
 }
 
