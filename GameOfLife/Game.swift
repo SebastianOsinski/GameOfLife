@@ -30,7 +30,7 @@ class Game {
     }
 
     func isAlive(row: Int, column: Int) -> Bool {
-        return cells[row + 1][column + 1]
+        return mutexQueue.sync { cells[row + 1][column + 1] }
     }
 
     func start() {
