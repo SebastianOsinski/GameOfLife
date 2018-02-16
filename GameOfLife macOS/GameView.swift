@@ -21,6 +21,12 @@ class GameView: View {
 
     weak var delegate: GameViewDelegate?
 
+    private lazy var renderer: GameRenderer = {
+        let renderer = GameRenderer()
+        renderer.delegate = self
+        return renderer
+    }()
+
     #if os(iOS) || os(tvOS)
     override func draw(_ rect: CGRect) {
         super.draw(rect)
@@ -34,28 +40,25 @@ class GameView: View {
     #endif
 
     private func drawCells(context: CGContext?) {
-        guard let delegate = delegate, let context = context else {
+        guard let context = context else {
             return
         }
 
-        let cellSize = CGSize(
-            width: frame.width / CGFloat(delegate.numberOfColumns()),
-            height: frame.height / CGFloat(delegate.numberOfRows())
-        )
+        renderer.render(context: context, frame: frame)
+    }
+}
 
-        var y: CGFloat = 0
-        for row in 0..<delegate.numberOfRows() {
-            var x: CGFloat = 0
-            for column in 0..<delegate.numberOfColumns() {
-                if let color = delegate.colorForCell(row: row, column: column)?.cgColor {
-                    let rect = CGRect(origin: CGPoint(x: x, y: y), size: cellSize)
+extension GameView: GameRendererDelegate {
 
-                    context.setFillColor(color)
-                    context.fill(rect)
-                }
-                x += cellSize.width
-            }
-            y += cellSize.height
-        }
+    func numberOfRows() -> Int {
+        return delegate?.numberOfRows() ?? 0
+    }
+
+    func numberOfColumns() -> Int {
+        return delegate?.numberOfColumns() ?? 0
+    }
+
+    func colorForCell(row: Int, column: Int) -> CGColor? {
+        return delegate?.colorForCell(row: row, column: column)?.cgColor
     }
 }

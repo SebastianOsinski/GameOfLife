@@ -14,24 +14,25 @@ class InterfaceController: WKInterfaceController {
 
     @IBOutlet var image: WKInterfaceImage!
 
-    private var numberOfRows: Int {
-        return game.rows
-    }
-    private var numberOfColumns: Int {
-        return game.columns
-    }
+    private let game = Game(rows: 50, columns: 50)
 
-    private var game: Game!
+    private lazy var renderer: GameRenderer = {
+        let renderer = GameRenderer()
+        renderer.delegate = self
+        return renderer
+    }()
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
+        setupAndStartGame()
+        addMenuItem(with: .repeat, title: "Restart", action: #selector(setupAndStartGame))
+    }
 
-        game = Game(rows: 50, columns: 50)
-
+    @objc private func setupAndStartGame() {
+        game.stop()
         game.onNextGeneration = { [weak self] in
             self?.createAndSetNewImage()
         }
-
         game.start()
     }
 
@@ -39,7 +40,7 @@ class InterfaceController: WKInterfaceController {
         UIGraphicsBeginImageContextWithOptions(contentFrame.size, false, WKInterfaceDevice.current().screenScale)
         let context = UIGraphicsGetCurrentContext()!
 
-        drawCells(context: context)
+       renderer.render(context: context, frame: contentFrame)
 
         let cgimage = context.makeImage()!
         let uiimage = UIImage(cgImage: cgimage)
@@ -47,36 +48,19 @@ class InterfaceController: WKInterfaceController {
         UIGraphicsEndImageContext()
         image.setImage(uiimage)
     }
+}
 
-    private func drawCells(context: CGContext?) {
-        guard let context = context else {
-            return
-        }
+extension InterfaceController: GameRendererDelegate {
 
-        let frame = contentFrame
-
-        let cellSize = CGSize(
-            width: frame.width / CGFloat(numberOfColumns),
-            height: frame.height / CGFloat(numberOfRows)
-        )
-
-        var y: CGFloat = 0
-        for row in 0..<numberOfRows {
-            var x: CGFloat = 0
-            for column in 0..<numberOfColumns {
-                if let color = colorForCell(row: row, column: column)?.cgColor {
-                    let rect = CGRect(origin: CGPoint(x: x, y: y), size: cellSize)
-
-                    context.setFillColor(color)
-                    context.fill(rect)
-                }
-                x += cellSize.width
-            }
-            y += cellSize.height
-        }
+    func numberOfRows() -> Int {
+        return game.rows
     }
 
-    func colorForCell(row: Int, column: Int) -> UIColor? {
-        return game.isAlive(row: row, column: column) ? .white : nil
+    func numberOfColumns() -> Int {
+        return game.columns
+    }
+
+    func colorForCell(row: Int, column: Int) -> CGColor? {
+        return game.isAlive(row: row, column: column) ? UIColor.white.cgColor : nil
     }
 }
