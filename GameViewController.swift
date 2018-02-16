@@ -6,7 +6,7 @@
 //  Copyright © 2017 Sebastian Osiński. All rights reserved.
 //
 
-#if os(iOS)
+#if os(iOS) || os(tvOS)
     import UIKit
 #else
     import Cocoa
@@ -25,7 +25,7 @@ class GameViewController: ViewController, GameViewDelegate {
         super.init(nibName: nil, bundle: nil)
 
         game.onNextGeneration = { [weak gameView] in
-            #if os(iOS)
+            #if os(iOS) || os(tvOS)
                 gameView?.setNeedsDisplay()
             #else
                 gameView?.needsDisplay = true
@@ -45,7 +45,7 @@ class GameViewController: ViewController, GameViewDelegate {
         super.viewDidLoad()
         gameView.delegate = self
 
-        #if os(iOS)
+        #if os(iOS) || os(tvOS)
             gameView.backgroundColor = .black
         #else
             gameView.wantsLayer = true

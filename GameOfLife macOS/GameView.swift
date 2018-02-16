@@ -5,7 +5,7 @@
 //  Created by Sebastian Osiński on 25/02/2017.
 //  Copyright © 2017 Sebastian Osiński. All rights reserved.
 //
-#if os(iOS)
+#if os(iOS) || os(tvOS)
     import UIKit
 #else
     import Cocoa
@@ -21,7 +21,7 @@ class GameView: View {
 
     weak var delegate: GameViewDelegate?
 
-    #if os(iOS)
+    #if os(iOS) || os(tvOS)
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         drawCells(context: UIGraphicsGetCurrentContext())

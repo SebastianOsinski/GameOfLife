@@ -6,7 +6,7 @@
 //  Copyright © 2017 Sebastian Osiński. All rights reserved.
 //
 
-#if os(iOS)
+#if os(iOS) || os(tvOS)
     import UIKit
 
     typealias View = UIView
