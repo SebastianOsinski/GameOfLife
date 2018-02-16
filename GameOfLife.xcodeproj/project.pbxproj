@@ -30,7 +30,57 @@
 		918B6AAC2036DABB0047A256 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91034FBD1E6232D20048C1E7 /* GameViewController.swift */; };
 		918B6AAD2036DABE0047A256 /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91034FC01E62346E0048C1E7 /* Typealiases.swift */; };
 		918B6AAE2036DAC10047A256 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918800811E61E9B70003D7EE /* AppDelegate.swift */; };
+		918B6AB52036DB570047A256 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 918B6AB32036DB570047A256 /* Interface.storyboard */; };
+		918B6AB72036DB570047A256 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 918B6AB62036DB570047A256 /* Assets.xcassets */; };
+		918B6ABE2036DB570047A256 /* GameOfLife watchOS Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 918B6ABD2036DB570047A256 /* GameOfLife watchOS Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		918B6AC32036DB570047A256 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918B6AC22036DB570047A256 /* InterfaceController.swift */; };
+		918B6AC52036DB570047A256 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918B6AC42036DB570047A256 /* ExtensionDelegate.swift */; };
+		918B6AC92036DB570047A256 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 918B6AC82036DB570047A256 /* Assets.xcassets */; };
+		918B6ACE2036DB570047A256 /* GameOfLife watchOS.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 918B6AB12036DB570047A256 /* GameOfLife watchOS.app */; };
+		918B6AD72036DC9E0047A256 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918800951E61EAF10003D7EE /* Game.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		918B6ABF2036DB570047A256 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 918800761E61E9B70003D7EE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 918B6ABC2036DB570047A256;
+			remoteInfo = "GameOfLife watchOS Extension";
+		};
+		918B6ACC2036DB570047A256 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 918800761E61E9B70003D7EE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 918B6AB02036DB570047A256;
+			remoteInfo = "GameOfLife watchOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		918B6AD22036DB570047A256 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				918B6ABE2036DB570047A256 /* GameOfLife watchOS Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		918B6AD62036DB570047A256 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				918B6ACE2036DB570047A256 /* GameOfLife watchOS.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		91034FBA1E62324A0048C1E7 /* Color+random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+random.swift"; sourceTree = "<group>"; };
@@ -51,6 +101,16 @@
 		918B6A9A2036DA820047A256 /* GameOfLife tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GameOfLife tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		918B6AA32036DA820047A256 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		918B6AA52036DA820047A256 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		918B6AB12036DB570047A256 /* GameOfLife watchOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GameOfLife watchOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		918B6AB42036DB570047A256 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		918B6AB62036DB570047A256 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		918B6AB82036DB570047A256 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		918B6ABD2036DB570047A256 /* GameOfLife watchOS Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "GameOfLife watchOS Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		918B6AC22036DB570047A256 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		918B6AC42036DB570047A256 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		918B6AC82036DB570047A256 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		918B6ACA2036DB570047A256 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		918B6ACB2036DB570047A256 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +129,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		918B6A972036DA820047A256 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		918B6ABA2036DB570047A256 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -97,6 +164,8 @@
 				918800801E61E9B70003D7EE /* GameOfLife iOS */,
 				9188009E1E620F7D0003D7EE /* GameOfLife macOS */,
 				918B6A9B2036DA820047A256 /* GameOfLife tvOS */,
+				918B6AB22036DB570047A256 /* GameOfLife watchOS */,
+				918B6AC12036DB570047A256 /* GameOfLife watchOS Extension */,
 				9188007F1E61E9B70003D7EE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -107,6 +176,8 @@
 				9188007E1E61E9B70003D7EE /* GameOfLife iOS.app */,
 				9188009D1E620F7D0003D7EE /* GameOfLife macOS.app */,
 				918B6A9A2036DA820047A256 /* GameOfLife tvOS.app */,
+				918B6AB12036DB570047A256 /* GameOfLife watchOS.app */,
+				918B6ABD2036DB570047A256 /* GameOfLife watchOS Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -143,6 +214,28 @@
 			path = "GameOfLife tvOS";
 			sourceTree = "<group>";
 		};
+		918B6AB22036DB570047A256 /* GameOfLife watchOS */ = {
+			isa = PBXGroup;
+			children = (
+				918B6AB32036DB570047A256 /* Interface.storyboard */,
+				918B6AB62036DB570047A256 /* Assets.xcassets */,
+				918B6AB82036DB570047A256 /* Info.plist */,
+			);
+			path = "GameOfLife watchOS";
+			sourceTree = "<group>";
+		};
+		918B6AC12036DB570047A256 /* GameOfLife watchOS Extension */ = {
+			isa = PBXGroup;
+			children = (
+				918B6AC22036DB570047A256 /* InterfaceController.swift */,
+				918B6AC42036DB570047A256 /* ExtensionDelegate.swift */,
+				918B6AC82036DB570047A256 /* Assets.xcassets */,
+				918B6ACA2036DB570047A256 /* Info.plist */,
+				918B6ACB2036DB570047A256 /* PushNotificationPayload.apns */,
+			);
+			path = "GameOfLife watchOS Extension";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -153,10 +246,12 @@
 				9188007A1E61E9B70003D7EE /* Sources */,
 				9188007B1E61E9B70003D7EE /* Frameworks */,
 				9188007C1E61E9B70003D7EE /* Resources */,
+				918B6AD62036DB570047A256 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				918B6ACD2036DB570047A256 /* PBXTargetDependency */,
 			);
 			name = "GameOfLife iOS";
 			productName = GameOfLife;
@@ -197,6 +292,40 @@
 			productReference = 918B6A9A2036DA820047A256 /* GameOfLife tvOS.app */;
 			productType = "com.apple.product-type.application";
 		};
+		918B6AB02036DB570047A256 /* GameOfLife watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 918B6AD32036DB570047A256 /* Build configuration list for PBXNativeTarget "GameOfLife watchOS" */;
+			buildPhases = (
+				918B6AAF2036DB570047A256 /* Resources */,
+				918B6AD22036DB570047A256 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				918B6AC02036DB570047A256 /* PBXTargetDependency */,
+			);
+			name = "GameOfLife watchOS";
+			productName = "GameOfLife watchOS";
+			productReference = 918B6AB12036DB570047A256 /* GameOfLife watchOS.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		918B6ABC2036DB570047A256 /* GameOfLife watchOS Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 918B6ACF2036DB570047A256 /* Build configuration list for PBXNativeTarget "GameOfLife watchOS Extension" */;
+			buildPhases = (
+				918B6AB92036DB570047A256 /* Sources */,
+				918B6ABA2036DB570047A256 /* Frameworks */,
+				918B6ABB2036DB570047A256 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "GameOfLife watchOS Extension";
+			productName = "GameOfLife watchOS Extension";
+			productReference = 918B6ABD2036DB570047A256 /* GameOfLife watchOS Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -222,6 +351,16 @@
 						DevelopmentTeam = GJF586P7E7;
 						ProvisioningStyle = Automatic;
 					};
+					918B6AB02036DB570047A256 = {
+						CreatedOnToolsVersion = 9.2;
+						DevelopmentTeam = GJF586P7E7;
+						ProvisioningStyle = Automatic;
+					};
+					918B6ABC2036DB570047A256 = {
+						CreatedOnToolsVersion = 9.2;
+						DevelopmentTeam = GJF586P7E7;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 918800791E61E9B70003D7EE /* Build configuration list for PBXProject "GameOfLife" */;
@@ -240,6 +379,8 @@
 				9188007D1E61E9B70003D7EE /* GameOfLife iOS */,
 				9188009C1E620F7D0003D7EE /* GameOfLife macOS */,
 				918B6A992036DA820047A256 /* GameOfLife tvOS */,
+				918B6AB02036DB570047A256 /* GameOfLife watchOS */,
+				918B6ABC2036DB570047A256 /* GameOfLife watchOS Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -268,6 +409,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				918B6AA42036DA820047A256 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		918B6AAF2036DB570047A256 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				918B6AB72036DB570047A256 /* Assets.xcassets in Resources */,
+				918B6AB52036DB570047A256 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		918B6ABB2036DB570047A256 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				918B6AC92036DB570047A256 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,7 +471,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		918B6AB92036DB570047A256 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				918B6AC52036DB570047A256 /* ExtensionDelegate.swift in Sources */,
+				918B6AD72036DC9E0047A256 /* Game.swift in Sources */,
+				918B6AC32036DB570047A256 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		918B6AC02036DB570047A256 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 918B6ABC2036DB570047A256 /* GameOfLife watchOS Extension */;
+			targetProxy = 918B6ABF2036DB570047A256 /* PBXContainerItemProxy */;
+		};
+		918B6ACD2036DB570047A256 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 918B6AB02036DB570047A256 /* GameOfLife watchOS */;
+			targetProxy = 918B6ACC2036DB570047A256 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		9188008A1E61E9B70003D7EE /* LaunchScreen.storyboard */ = {
@@ -330,6 +511,14 @@
 				918800A41E620F7D0003D7EE /* Base */,
 			);
 			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		918B6AB32036DB570047A256 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				918B6AB42036DB570047A256 /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -542,6 +731,128 @@
 			};
 			name = Release;
 		};
+		918B6AD02036DB570047A256 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GJF586P7E7;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "GameOfLife watchOS Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.osinski.GameOfLife.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Debug;
+		};
+		918B6AD12036DB570047A256 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GJF586P7E7;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "GameOfLife watchOS Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.osinski.GameOfLife.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Release;
+		};
+		918B6AD42036DB570047A256 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GJF586P7E7;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				IBSC_MODULE = GameOfLife_watchOS_Extension;
+				INFOPLIST_FILE = "GameOfLife watchOS/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.osinski.GameOfLife.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Debug;
+		};
+		918B6AD52036DB570047A256 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GJF586P7E7;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				IBSC_MODULE = GameOfLife_watchOS_Extension;
+				INFOPLIST_FILE = "GameOfLife watchOS/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.osinski.GameOfLife.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -577,6 +888,24 @@
 			buildConfigurations = (
 				918B6AA62036DA820047A256 /* Debug */,
 				918B6AA72036DA820047A256 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		918B6ACF2036DB570047A256 /* Build configuration list for PBXNativeTarget "GameOfLife watchOS Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				918B6AD02036DB570047A256 /* Debug */,
+				918B6AD12036DB570047A256 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		918B6AD32036DB570047A256 /* Build configuration list for PBXNativeTarget "GameOfLife watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				918B6AD42036DB570047A256 /* Debug */,
+				918B6AD52036DB570047A256 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
