@@ -13,7 +13,7 @@ class Game {
     let rows: Int
     let columns: Int
 
-    var onNextGeneration: ((Void) -> Void)?
+    var onNextGeneration: (() -> Void)?
 
     private var cells = [[Bool]]()
     private var isRunning = false

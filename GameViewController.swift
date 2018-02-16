@@ -63,7 +63,7 @@ class GameViewController: ViewController, GameViewDelegate {
     }
 
     func colorForCell(row: Int, column: Int) -> Color? {
-        return game.isAlive(row: row, column: column) ? .random : nil
+        return game.isAlive(row: row, column: column) ? .white : nil
     }
 
     #if os(iOS)

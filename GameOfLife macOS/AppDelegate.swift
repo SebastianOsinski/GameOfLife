@@ -13,9 +13,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     @IBOutlet weak var window: NSWindow!
 
-
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        let viewController = GameViewController(game: Game(rows: 100, columns: 100))!
+        let viewController = GameViewController(game: Game(rows: 200, columns: 200))!
         window.contentViewController = viewController
         window.setFrame(NSRect(x: 0, y: 0, width: 1000, height: 1000), display: true)
     }
